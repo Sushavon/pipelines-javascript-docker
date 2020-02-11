@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sushavonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sushavonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sushavonpipelinesjavascriptdocker 
+          image: pwccontainerregistry.azurecr.io/sushavonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
